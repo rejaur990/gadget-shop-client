@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom"
 
 
 const Navbar = () =>{
@@ -35,25 +36,36 @@ const Navbar = () =>{
         <li><a>Item 3</a></li>
       </ul>
     </div>
-    <a className="btn btn-ghost text-xl">daisyUI</a>
+    <h2 className="btn btn-ghost text-xl">Gadget Shop</h2>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
-      <li><a>Item 1</a></li>
+      
       <li>
-        <details>
-          <summary>Parent</summary>
-          <ul className="p-2">
-            <li><a>Submenu 1</a></li>
-            <li><a>Submenu 2</a></li>
-          </ul>
-        </details>
+    <NavLink to="/">Home</NavLink>
       </li>
-      <li><a>Item 3</a></li>
+      <li>
+    <NavLink to="/products">Products</NavLink>
+      </li>
+      <li>
+    <NavLink to="/about">About</NavLink>
+      </li>
+      <li>
+    <NavLink to="/contact">Contact Us</NavLink>
+      </li>
+      
     </ul>
   </div>
   <div className="navbar-end">
-    <a className="btn">Button</a>
+    <div className="flex gap-2 items-center justify-between">
+    <button className="btn bg-red-900 text-white px-8 py-1 rounded-md" >
+    Sign in
+    </button>
+    <button className="btn bg-blue-800 text-white px-8 py-2 rounded-md" >
+    Sign up
+    </button>
+
+    </div>
   </div>
 </div>
 
