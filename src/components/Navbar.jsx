@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom"
+import { Link, NavLink } from "react-router-dom"
 
 
 const Navbar = () =>{
@@ -58,12 +58,16 @@ const Navbar = () =>{
   </div>
   <div className="navbar-end">
     <div className="flex gap-2 items-center justify-between">
-    <button className="btn bg-red-900 text-white px-8 py-1 rounded-md" >
-    Sign in
+   <Link to="/login">
+   <button className="btn bg-red-900 text-white px-8 py-1 rounded-md" >
+    Login
     </button>
+   </Link>
+    <Link to="/register">
     <button className="btn bg-blue-800 text-white px-8 py-2 rounded-md" >
-    Sign up
+    Register
     </button>
+    </Link>
 
     </div>
   </div>
